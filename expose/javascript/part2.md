@@ -24,4 +24,22 @@
    ![JavaScript code snippet for question 9](images/lab4-part1b-q9.png)
 9. At line 11, an error will be thrown. The variable `i` is declared using the `let` keyword within a `for` loop. As such, `i` only exists within the scope of that loop. When we attempt to print it to console from outside the loop, its value is inaccessible. 
     ![JavaScript code snippet for question 10](images/lab4-part1b-q10.png)
-10. 
+10. At line 12, "3" will be printed to the console. This is because `length` is assigned to the value "3" as a constant variable in the function scope. As line 12 is in the function, `const length` will still be accessible. 
+    
+   ![JavaScript code snippet for question 11](images/lab4-part1b-q11.png)
+
+11. This function returns `[50, 100, 150]`. Although the variable `discounted`, is declared as a `const`, we are allowed to manipulate it as long as it is not reassigned. Since we push the discounted prices (half of the prices in the input list), within the for loop, this is what is returned. 
+
+![JavaScript code snippet for question 12](images/lab4-part1b-q12.png)
+
+12. Given the above Object, write the notation for:  (These should be in your part2.md)
+    - Accessing the value of the name property in the student object
+      - `student.name`
+    - Accessing the value of the Grad Year property in the student object
+      - `student["Grad Year"]`
+    - Calling the function for the greeting property in the student object.
+      - `student.greeting()`
+    - Accessing the name property of the object in the Favorite Teacher property in student
+      - `student["Favorite Teacher"].name`
+    - Access index zero in the array of the courseLoad property of the student object
+      - `student.courseLoad[0]`
