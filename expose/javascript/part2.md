@@ -43,3 +43,40 @@
       - `student["Favorite Teacher"].name`
     - Access index zero in the array of the courseLoad property of the student object
       - `student.courseLoad[0]`
+
+For each of the following questions, note down the output as well as a brief explanation why that output was given  (These should be in your part2.md)
+
+13. Arithmetic
+ - '3' + 2
+   - `'32'` because the integer 2 is cast to a string in order to concatenate it with string `'3'`. 
+- '3' - 2
+  - `1` because the string 3 is cast to an integer in order to subtract integer 2 was not cast to a string as in the previous example because the `-` operator is undefined for strings. 
+- 3 + null
+  - `3` because `null` is cast to integer 0. 
+- '3' + null
+  - `'3null'` because `null` is cast to the string `'null'` in order to be concatenated with a string. 
+- true + 3
+  - 4 because `true` is cast to integer 1 in order for it to be added to an integer. 
+- false + null
+  - 0 because both values are cast to integer 0. This cast occurs for both values because it is the only mapping for which `+` is defined for these values. 
+- '3' + undefined
+  - '3undefined' because `undefined` is cast to its exact string representation to allow concatenation with another string. 
+- '3' - undefined
+  - `NaN`, because `undefined` is cast to `NaN` when we attempt to use it as a number. Since subtraction is not defined for string operands,  `'3'`  was cast to an integer, leading `undefined` to be interpreted as an integer. All math expressions including `NaN` evaluate to `NaN`, giving us this final result. 
+  
+14. Comparison
+   - '2' > 1
+     - `true`, because `'2'` is cast to integer 2 for which `>` is defined.
+   - '2' < '12'
+     - `false` because the `<` operator compares strings based on the lexographic order of each of their characters. Since the first character of `'12'`, `'1'` comes before `2` lexographically, `12` is interpreted to be less than '2'. 
+   - 2 == '2'
+     - `true`, because these operands are castable to one another. 
+   - 2 === '2'
+     - `false` because these operands have different types, despite being castable to one another. 
+   - true == 2
+     - 'false' because 'true' casts to the integer 1, which does not equal 2. 
+   - true === Boolean(2)
+     - 'true', because when nonzero integers are explicitly cast to booleans, they evaluate to true. 
+  
+15. Explain the difference between the == and === operators.
+    - The `===` imposes stricter equality requirements than `==`. The former only returns `true` when both operands are equal values of the same type. By contrast, `==` will attempt to cast operands to the same type before evaluating their equality. 
