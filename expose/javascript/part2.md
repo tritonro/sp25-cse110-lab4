@@ -80,3 +80,18 @@ For each of the following questions, note down the output as well as a brief exp
   
 15. Explain the difference between the == and === operators.
     - The `===` imposes stricter equality requirements than `==`. The former only returns `true` when both operands are equal values of the same type. By contrast, `==` will attempt to cast operands to the same type before evaluating their equality. 
+16. The code that iterates through the given `statistics` object and prints values of properites starting with "r" and odd values can be found in [part2-question16.js](part2-question16.js)
+17. The result of running the code below will be `[2, 4, 6]`. This is because the `modifyArray` function iterates through its parameter `array` and creates a new list of the results of calling the function `callback` on each element. Since `doSomething` is passed in as the `callback`, the new list doubles each element of the previous one. 
+    ![JavaScript callback example for question 17](images/lab4-part1b-q17.png)
+  18. The code that prints the current time every second can be found in [part2-question18.js](part2-question18.js)
+        ![JavaScript code snippet for question 19](images/lab4-part1b-q19.png)
+  19. The above code outputs: 
+         ```
+            1
+            4
+            3
+            2
+
+         ```
+
+         
